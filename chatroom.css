@@ -1,0 +1,19 @@
+/* CSS declarations go here */
+.container{
+	margin-top: 100px;
+	height: 400px;
+	width: 700px;
+}
+
+#rooms{
+	overflow: auto;
+	max-height: 400px;
+}
+
+form{
+	padding:10px;
+	float: none;
+    margin: 0 auto;
+    text-align: center;
+}
+

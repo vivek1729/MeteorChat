@@ -1,0 +1,51 @@
+<head>
+  <title>Test Chat Application</title>
+</head>
+
+<body>
+<div class="navbar-fixed-top">
+  <h1 style="text-align:center;">Meteor Chat demo</h1>
+</div>
+<div class = container>
+  {{> message}}
+  <div class="navbar-fixed-bottom">
+  	{{> send}}
+  </div>
+</div>
+</body>
+
+<template name="hello">
+  <h1>Hello World!</h1>
+  {{greeting}}
+  <input type="button" value="Click" />
+</template>
+<template name="message">
+<div id="rooms">
+	<table class="table table-striped table-bordered">
+        <tbody>
+        {{#each messages}}
+          <tr>
+            <td><strong>{{name}} :</strong> {{text}}</td>
+          </tr>
+        {{/each}}
+        	<tr>
+        </tbody>
+    </table>
+</div>
+</template>
+
+<template name="send">
+{{#if username}}
+<form class="navbar-form" action="javascript:void(0);">
+  <textarea id="messagebody" rows="4" class="span6">
+  </textarea>
+  <button type="submit" class="btn btn-primary">
+  <i class="icon-envelope"></i> Send</button>
+</form>
+{{else}}
+<form class="navbar-form pull-left" action="javascript:void(0);">
+  <input type="text" id="username" class="span2">
+  <input type="submit" value="Create user" class="btn">
+</form>
+{{/if}}
+</template>
